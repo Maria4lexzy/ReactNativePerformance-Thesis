@@ -3,20 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Pages Site</title>
+  <title>Performance Reports</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
-  <h1>Welcome to My GitHub Pages Site</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+  <div class="container">
+    <h1 class="mt-5">Performance Reports for</h1>
+    <ul class="list-group mt-4">
+      <li class="list-group-item">
+        <a href="INTR.html">Various Values of "initialNumToRender"</a>
+      </li>
+      <li class="list-group-item">
+        <a href="performance_reports/maxToRenderPerBatch.html">maxToRenderPerBatch</a>
+      </li>
+      <li class="list-group-item">
+        <a href="performance_reports/updateCellsBatchingPeriod.html">updateCellsBatchingPeriod</a>
+      </li>
+      <li class="list-group-item">
+        <a href="performance_reports/windowSize.html">windowSize</a>
+      </li>
+      <li class="list-group-item">
+        <a href="performance_reports/getItemLayout.html">getItemLayout</a>
+      </li>
     </ul>
-  </nav>
-  <main>
-    <h2>Home Page</h2>
-    <p>This is the main landing page of my GitHub Pages site.</p>
-  </main>
+  </div>
+
+  <!-- Include Bootstrap JS (Optional) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
