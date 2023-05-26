@@ -1,35 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Performance Reports</title>
-  <!-- Include Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-</head>
-<body>
-  <div class="container">
-    <h1 class="mt-5">Performance Reports for</h1>
-    <ul class="list-group mt-4">
-      <li class="list-group-item">
-        <a href="INTR.html">Various Values of "initialNumToRender"</a>
-      </li>
-      <li class="list-group-item">
-        <a href="performance_reports/maxToRenderPerBatch.html">maxToRenderPerBatch</a>
-      </li>
-      <li class="list-group-item">
-        <a href="performance_reports/updateCellsBatchingPeriod.html">updateCellsBatchingPeriod</a>
-      </li>
-      <li class="list-group-item">
-        <a href="performance_reports/windowSize.html">windowSize</a>
-      </li>
-      <li class="list-group-item">
-        <a href="performance_reports/getItemLayout.html">getItemLayout</a>
-      </li>
-    </ul>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Accordion Example</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="mt-5 display-4">Performance Reports For:</h3>
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+              Section 1
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a
+              class="collapsed card-link"
+              data-toggle="collapse"
+              href="#collapseTwo"
+            >
+              Section 2
+            </a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <ul>
+                <li>Item A</li>
+                <li>Item B</li>
+                <li>Item C</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a
+              class="collapsed card-link"
+              data-toggle="collapse"
+              href="#collapseThree"
+            >
+              Section 3
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <ul>
+                <li>Item X</li>
+                <li>Item Y</li>
+                <li>Item Z</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a
+              class="collapsed card-link"
+              data-toggle="collapse"
+              href="#collapsefour"
+            >
+              FlatList Performance Reports
+            </a>
+          </div>
+          <div id="collapsefour" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <ol>
+                <li>
+                  <a href="FlatList/results/BESTVALUES_GIL/report/report.html"
+                    >Impact of using "Best" Prop Values to Attain Good
+                    Performance while using "getItemLayout"</a
+                  >
+                </li>
+                <li>
+                  <a href="FlatList/results/BESTVALUES_NOGIL/report/report.html"
+                    >Impact of using "Best" Prop Values to Attain Good
+                    Performance WITHOUT using "getItemLayout"</a
+                  >
+                </li>
+                <hr />
+                <li>
+                  <a href="FlatList/results/INTR/report/report.html"
+                    >Impact of different Values of "initialNumToRender"</a
+                  >
+                </li>
+                <li>
+                  <a href="FlatList/results/MTRPB/report/report.html"
+                    >Impact of different Values of "maxToRenderPerBatch"</a
+                  >
+                </li>
+                <li>
+                  <a href="FlatList/results/UPCBP/report/report.html"
+                    >Impact of different Values of
+                    "updateCellsBatchingPeriod"</a
+                  >
+                </li>
+                <li>
+                  <a href="FlatList/results/WS/report/report.html"
+                    >Impact of different Values of "windowSize"</a
+                  >
+                </li>
+                <li>
+                  <a href="FlatList/results/GIL/report/report.html"
+                    >Impact of using "getItemLayout"</a
+                  >
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- Include Bootstrap JS (Optional) -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</body>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
 </html>
