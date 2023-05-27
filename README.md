@@ -6,10 +6,12 @@
 -->
 
 # Repository Description
-This repository contains performance reports generated using Flashlight, a performance testing tool. The reports provide insights into the performance of different parameters in the application.
-  
-_xxx._
 
+This repository contains performance reports generated using Flashlight, a performance testing tool. The reports provide insights into the performance of different parameters in the application.
+
+The performance reports look like the image below showing the performance comparison between a basic React Native FlatList, and optimized list, Shopify FlashList and VirtualizedList
+
+![Alt text](images/reports/allLists.jpg?raw=true 'Title')
 
 <details id=0>
 <summary><h2>View The Reports</h2></summary>
