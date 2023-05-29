@@ -1,2 +1,2 @@
 60 - weird luggy layout, jumping frames
-120 - nothing visible,very bad luggy layout
+240 - nothing visible,very bad luggy layout

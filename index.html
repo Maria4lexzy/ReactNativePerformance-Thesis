@@ -10,230 +10,402 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>Accordion Example</title>
+    <title>Optimizing Performance in React‐based Systems</title>
   </head>
   <body>
     <div class="container">
-      <h3 class="mt-5 display-4">Performance Reports For:</h3>
-      <div id="accordion">
-        <div class="card">
-          <div class="card-header">
-            <a class="card-link" data-toggle="collapse" href="#collapseOne">
-              Re-render / Inefficient Rendering Performance Reports
-            </a>
-          </div>
-          <div id="collapseOne" class="collapse show" data-parent="#accordion">
-            <div class="card-body">
-              <ol>
-                <li>
-                  <a href="ReRendering/fragments/report/report.html"
-                    >Impact of using Fragments</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="ReRendering/memoization/big_filter/report/report.html"
-                    >Performance Result of using Memoization - Big Filter</a
-                  >
-                </li>
-                <hr />
-                <li>
-                  <a
-                    href="ReRendering/memoization/small_tests/simple/report/report.html"
-                    >Performance Result of using Memoization: Small Tests -
-                    simple</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="ReRendering/memoization/small_tests/semiComplex_160artists/report/report.html"
-                    >Performance Result of using Memoization: Small Tests -
-                    semi-complex</a
-                  >
-                </li>
+      <div class="container px-3">
+        <h5 class="mt-5 display-5">
+          React Native Performance Issues and Optimization Techniques
+        </h5>
+        <p>This page contains a table that provides an overview of common performance issues encountered in the development process and suggests optimization techniques to address them
+          <br\>
+          It also includes detailed performance reports for each optimization problem discussed in the table.
+          Lastly, the page includes activity diagrams for each of the performance optimization techniques. These diagrams visually depict the flow of activities involved in testing and applying the optimization techniques. 
+        </p>
+        <div class="accordion" id="accordionExample_">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseOne_"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Performance Issues and Optimization Techniques to Address Them
+                </button>
+              </h2>
+            </div>
 
-                <li>
-                  <a
-                    href="ReRendering/memoization/small_tests/complex_800artists/report/report.html"
-                    >Performance Result of using Memoization: Small Tests -
-                    complex</a
-                  >
-                </li>
-                <hr />
-                <li>
-                  <a
-                    href="ReRendering/useReducer_useState/results/report/report.html"
-                    >Impact of using using "useState" vs "useReducer" with
-                    simple, semi-complex and complex components</a
-                  >
-                </li>
-                <hr />
-                <li>
-                  <a href="">Impact of using using Fragments</a>
-                </li>
-              </ol>
+            <div
+              id="collapseOne_"
+              class="collapse show"
+              aria-labelledby="headingOne"
+              data-parent="#accordionExample_"
+            >
+              <div class="card-body">
+                <div class="container">
+                  <p></p>
+                  <table class="table table-bordered">
+                    <caption>
+                      Performance issues and ways to address them
+                    </caption>
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Performance Issue</th>
+                        <th>Optimization Technique</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td rowspan="4">
+                          Unnecessary Re-renders/Inefficient Rendering
+                        </td>
+                        <td>Memoization</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Using <code>useReducer()</code> instead of
+                          <code>useState()</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Fragments</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Using <code>useEffect()</code> dependencies
+                          efficiently
+                        </td>
+                      </tr>
+                      <tr>
+                        <td rowspan="3">Slow App Startup Time</td>
+                        <td>Code splitting</td>
+                      </tr>
+                      <tr>
+                        <td>Tree shaking</td>
+                      </tr>
+                      <tr>
+                        <td>Lazy loading</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="4">Threads Bottleneck</td>
+                        <td>Removing Logs</td>
+                      </tr>
+                      <tr>
+                        <td><code>RenderToHardwareTextureAndroid</code></td>
+                      </tr>
+                      <tr>
+                        <td>InteractionManager</td>
+                      </tr>
+                      <tr>
+                        <td><code>useNativeDriver</code> in Animated</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">Slow Render of Lists</td>
+                        <td>Selecting appropriate List type</td>
+                      </tr>
+                      <tr>
+                        <td>Parameters tuning</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-header">
-            <a
-              class="collapsed card-link"
-              data-toggle="collapse"
-              href="#collapseTwo"
-            >
-              App Startup Time Perfomace Reports
-            </a>
-          </div>
-          <div id="collapseTwo" class="collapse" data-parent="#accordion">
-            <div class="card-body">
-              <ol>
-                <li>
-                  <a href="#">Impact of using "Best"</a>
-                </li>
-              </ol>
+      </div>
+      <div class="container px-3">
+        <h5 class="mt-3 display-5">Performance Reports For:</h5>
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                Re-render / Inefficient Rendering Performance Reports
+              </a>
             </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header">
-            <a
-              class="collapsed card-link"
-              data-toggle="collapse"
-              href="#collapseThree"
+            <div
+              id="collapseOne"
+              class="collapse show"
+              data-parent="#accordion"
             >
-              Threads Bottleneck Performance Reports
-            </a>
-          </div>
-          <div id="collapseThree" class="collapse" data-parent="#accordion">
-            <div class="card-body">
-              <ol>
-                <li>
-                  <a
-                    href="ThreadsBottleneck/consoleLogs/results/report/report.html"
-                    >How console logs impact performance</a
-                  >
-                </li>
-                <hr />
-                <li>
-                  <a
-                    href="ThreadsBottleneck/HardwareTexture/Animations/report/report.html"
-                    >HardwareTexture - Animations</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="ThreadsBottleneck/HardwareTexture/Heavy_Re-rendering/report/report.html"
-                    >HardwareTexture - Heavy Rendering</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="ThreadsBottleneck/HardwareTexture/Lists/report/report.html"
-                    >HardwareTexture - Lists</a
-                  >
-                </li>
-                <hr />
-                <li>
-                  <a href="ThreadsBottleneck/InteractionManager/gif_reduced.gif"
-                    >InteractionManager - write what the gif means</a
-                  >
-                </li>
-                <hr />
-                <li>
-                  <a href="ThreadsBottleneck/NativeDriver/report/report.html"
-                    >NativeDriver</a
-                  >
-                </li>
+              <div class="card-body">
+                <ol>
+                  <li>
+                    <a href="ReRendering/fragments/report/report.html"
+                      >Performance Report for Fragments</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      href="ReRendering/memoization/big_filter/report/report.html"
+                      >Performance Result of Memoization - Big Filter</a
+                    >
+                  </li>
 
-                <hr />
-              </ol>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header">
-            <a
-              class="collapsed card-link"
-              data-toggle="collapse"
-              href="#collapsefour"
-            >
-              FlatList Performance Reports
-            </a>
-          </div>
-          <div id="collapsefour" class="collapse" data-parent="#accordion">
-            <div class="card-body">
-              <ol>
-                <li>
-                  <a href="FlatList/results/BESTVALUES_GIL/report/report.html"
-                    >Impact of using "Best" Prop Values to Attain Good
-                    Performance while using "getItemLayout"</a
-                  >
-                </li>
-                <li>
-                  <a href="FlatList/results/BESTVALUES_NOGIL/report/report.html"
-                    >Impact of using "Best" Prop Values to Attain Good
-                    Performance WITHOUT using "getItemLayout"</a
-                  >
-                </li>
-                <hr />
-                <li>
-                  <a href="FlatList/results/INTR/report/report.html"
-                    >Impact of different Values of "initialNumToRender"</a
-                  >
-                </li>
-                <li>
-                  <a href="FlatList/results/MTRPB/report/report.html"
-                    >Impact of different Values of "maxToRenderPerBatch"</a
-                  >
-                </li>
-                <li>
-                  <a href="FlatList/results/UPCBP/report/report.html"
-                    >Impact of different Values of
-                    "updateCellsBatchingPeriod"</a
-                  >
-                </li>
-                <li>
-                  <a href="FlatList/results/WS/report/report.html"
-                    >Impact of different Values of "windowSize"</a
-                  >
-                </li>
-                <li>
-                  <a href="FlatList/results/GIL/report/report.html"
-                    >Impact of using "getItemLayout"</a
-                  >
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
+                  <li>
+                    <a
+                      href="ReRendering/memoization/small_tests/simple/report/report.html"
+                      >Performance Result of Memoization: Small Tests -
+                      simple</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="ReRendering/memoization/small_tests/semiComplex_160artists/report/report.html"
+                      >Performance Result of Memoization: Small Tests -
+                      semi-complex</a
+                    >
+                  </li>
 
-        <div class="card">
-          <div class="card-header">
-            <a
-              class="collapsed card-link"
-              data-toggle="collapse"
-              href="#collapse5"
-            >
-              ALL LISTS
-            </a>
+                  <li>
+                    <a
+                      href="ReRendering/memoization/small_tests/complex_800artists/report/report.html"
+                      >Performance Result of Memoization: Small Tests -
+                      complex</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      href="ReRendering/useReducer_useState/results/report/report.html"
+                      >Performance Report for "useState" vs "useReducer" with
+                      simple, semi-complex and complex components</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a href="ReRendering/useEffect/report/report.html"
+                      >Performance Report for UseEffect</a
+                    >
+                  </li>
+                </ol>
+              </div>
+            </div>
           </div>
-          <div id="collapse5" class="collapse" data-parent="#accordion">
-            <div class="card-body">
-              <ol>
-                <li>
-                  <a href="FlatList/results/LISTS/report_all_list/report.html"
-                    >Basic FlatList VS Optimized FlatList Vs FlashList VS
-                    VirtualizedList</a
-                  >
-                </li>
-              </ol>
+          <div class="card">
+            <div class="card-header">
+              <a
+                class="collapsed card-link"
+                data-toggle="collapse"
+                href="#collapseTwo"
+              >
+                App Startup Time Perfomace Reports
+              </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <ol>
+                  <li>
+                    <a href="SlowAppStartupTime/LazyLoading/report/report.html"
+                      >Performance Results of Slow App Startup Time</a
+                    >
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a
+                class="collapsed card-link"
+                data-toggle="collapse"
+                href="#collapseThree"
+              >
+                Threads Bottleneck Performance Reports
+              </a>
+            </div>
+            <div id="collapseThree" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <ol>
+                  <li>
+                    <a
+                      href="ThreadsBottleneck/consoleLogs/results/report/report.html"
+                      >How console logs impact performance</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      href="ThreadsBottleneck/HardwareTexture/Animations/report/report.html"
+                      >HardwareTexture - Animations</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="ThreadsBottleneck/HardwareTexture/Heavy_Re-rendering/report/report.html"
+                      >HardwareTexture - Heavy Rendering</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="ThreadsBottleneck/HardwareTexture/Lists/report/report.html"
+                      >HardwareTexture - Lists</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      href="ThreadsBottleneck/InteractionManager/gif_reduced.gif"
+                      >InteractionManager - write what the gif means</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a href="ThreadsBottleneck/NativeDriver/report/report.html"
+                      >NativeDriver</a
+                    >
+                  </li>
+
+                  <hr />
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a
+                class="collapsed card-link"
+                data-toggle="collapse"
+                href="#collapsefour"
+              >
+                FlatList Performance Reports
+              </a>
+            </div>
+            <div id="collapsefour" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <ol>
+                  <li>
+                    <a href="FlatList/results/BESTVALUES_GIL/report/report.html"
+                      >Performance Report for "Best" Prop Values to Attain Good
+                      Performance while using "getItemLayout"</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="FlatList/results/BESTVALUES_NOGIL/report/report.html"
+                      >Performance Report for "Best" Prop Values to Attain Good
+                      Performance WITHOUT using "getItemLayout"</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a href="FlatList/results/INTR/report/report.html"
+                      >Performance Report for different Values of
+                      "initialNumToRender"</a
+                    >
+                  </li>
+                  <li>
+                    <a href="FlatList/results/MTRPB/report/report.html"
+                      >Performance Report for different Values of
+                      "maxToRenderPerBatch"</a
+                    >
+                  </li>
+                  <li>
+                    <a href="FlatList/results/UPCBP/report/report.html"
+                      >Performance Report for different Values of
+                      "updateCellsBatchingPeriod"</a
+                    >
+                  </li>
+                  <li>
+                    <a href="FlatList/results/WS/report/report.html"
+                      >Performance Report for different Values of
+                      "windowSize"</a
+                    >
+                  </li>
+                  <li>
+                    <a href="FlatList/results/GIL/report/report.html"
+                      >Performance Report for "getItemLayout"</a
+                    >
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <a
+                class="collapsed card-link"
+                data-toggle="collapse"
+                href="#collapse5"
+              >
+                ALL LISTS
+              </a>
+            </div>
+            <div id="collapse5" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <ol>
+                  <li>
+                    <a href="FlatList/results/LISTS/report_all_list/report.html"
+                      >Basic FlatList VS Optimized FlatList Vs FlashList VS
+                      VirtualizedList</a
+                    >
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images -->
+      <div class="container mt-2 px-3">
+        <h5 class="mt-2 display-5">Test Diagrams</h5>
+        <div id="accordion2">
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link" data-toggle="collapse" href="#collapseImg1">
+                Activity Diagrams for Test Sequence
+              </a>
+            </div>
+            <div
+              id="collapseImg1"
+              class="collapse show"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                <p class="lead">
+                  The following are Activity Diagrams for Test Sequence
+                </p>
+                <ol>
+                  <li>
+                    <a href="images/testDiagrams/Lists.svg">FlatList</a>
+                  </li>
+                  <li>
+                    <a href="images/testDiagrams/RenderingRN.svg"
+                      >General Concept of Rendering
+                    </a>
+                  </li>
+                  <li>
+                    <a href="images/testDiagrams/Rerendering.svg"
+                      >Optimization Techniques Applied in: Unnecessary Re-render
+                      / Inefficeint Rendering</a
+                    >
+                  </li>
+                  <li>
+                    <a href="images/testDiagrams/StartupTime.svg"
+                      >Optimization Techniques Applied in: Slow App Startup
+                      Time</a
+                    >
+                  </li>
+                  <li>
+                    <a href="images/testDiagrams/ThreadBottleneck.svg"
+                      >Optimization Techniques Applied in: Threads Bottleneck</a
+                    >
+                  </li>
+                </ol>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   </body>
 </html>
