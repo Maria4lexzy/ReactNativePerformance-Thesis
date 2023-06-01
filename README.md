@@ -7,14 +7,12 @@
 
 # Repository Description
 
-This repository contains performance reports generated using Flashlight, a performance testing tool. The reports provide insights into the performance of different parameters in the application.
+<!-- This repository contains performance reports and test diagrams generated using Flashlight, a performance testing tool. The reports provide insights into the performance of different parameters in the application.
 
-The performance reports look like the image below showing the performance comparison between a basic React Native FlatList, and optimized list, Shopify FlashList and VirtualizedList
+The performance reports look like the image below showing the performance comparison between a basic React Native FlatList, and optimized list, Shopify FlashList and VirtualizedList -->
+
+To view the performance reports, simply click on link below. The page contains links to respective reports. Each report provides detailed information and insights into the performance characteristics of the application.
+
+https://maria4lexzy.github.io/ReactNativePerformance-Thesis/
 
 ![Alt text](images/reports/allLists.jpg?raw=true 'Title')
-
-<details id=0>
-<summary><h2>View The Reports</h2></summary>
-To view the performance reports, simply click on link below. The page contains links to respective reports. Each report provides detailed information and insights into the performance characteristics of the application.
-  
-https://maria4lexzy.github.io/ReactNativePerformance-Thesis/
